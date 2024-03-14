@@ -29,7 +29,7 @@ class BaseModel:
             models.storage.new(self)
 
     def save(self):
-        """Update updated_at with the current datetime."""
+        """Update updated_at with the current date-time"""
         self.updated_at = datetime.today()
         models.storage.save()
 
@@ -37,7 +37,7 @@ class BaseModel:
         """Return the dictionary of the BaseModel instance.
 
         Includes the key/value pair __class__ representing
-        the class name of the object.
+        the class name of the object
         """
 
         rdict = self.__dict__.copy()
@@ -47,6 +47,6 @@ class BaseModel:
         return rdict
 
     def __str__(self):
-        """Return the print/str representation of the BaseModel instance."""
+        """Return the print/str representation of the BaseModel instance"""
         clname = self.__class__.__name__
         return "[{}] ({}) {}".format(clname, self.id, self.__dict__)

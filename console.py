@@ -157,12 +157,9 @@ def parse(arg):
             print(count)
 
         def do_update(self, arg):
-            """Usage: update <class> <id> <attribute_name> <attribute_value> or
-            <class>.update(<id>, <attribute_name>, <attribute_value>) or
-            <class>.update(<id>, <dictionary>)
-
-            Update a class instance of a given id by adding or updating
-            a given attribute key/value pair or dictionary.
+            """
+            Update class instance of a id by adding / updating
+            a given attribute key-value pair or dictionary
             """
             argl = parse(arg)
             objdict = storage.all()
@@ -171,7 +168,7 @@ def parse(arg):
                 print("** class name missing **")
                 return False
             if argl[0] not in HBNBCommand.__classes:
-                print("** class doesn't exist **")
+                print("** class doesn'it exist **")
                 return False
             if len(argl) == 1:
                 print("** instance id missing **")
